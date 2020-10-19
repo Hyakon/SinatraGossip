@@ -1,0 +1,14 @@
+<html lang="french">
+<head>
+  <title>The Gossip Project</title>
+</head>
+<body>
+  <h1>Voici la page du potin n <%= params['id'] %></h1>
+    <p>
+      Son auteur : <%= gossip.author %><br/>
+      Le contenu du potion : <%= gossip.content %>
+    </p>
+  <a href="/gossips/<%= params['id'] %>/edit">Edit</a>
+  <a href="/">Revenir a l'accueil</a>
+</body>
+</html>
