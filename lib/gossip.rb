@@ -1,12 +1,13 @@
 # frozen_string_literal: true
-require 'pry'
+
 # Class
 class Gossip
-  attr_accessor :author, :content
+  attr_accessor :author, :content, :comments
 
   def initialize(author, content)
     @author = author
     @content = content
+    @comments = []
   end
 
   def save
@@ -42,8 +43,5 @@ class Gossip
     CSV.open('./db/gossip.csv', 'wb') do |item|
       array_csv.each { |line| item << line }
     end
-
   end
 end
-
-# Gossip.new('','').update('new','new_contend')
